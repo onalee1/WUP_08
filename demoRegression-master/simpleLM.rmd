@@ -53,4 +53,13 @@ plot(WEIGHT~HEADWTH,data=bears)
 abline(headwthmodel)
 summary.lm(headwthmodel)
 ```
-Headwth model's r-sqaured is 0.6064.
+Headwth model's r-squared is 0.6064.
+
+```{r}
+lengthmodel <- lm(WEIGHT~LENGTH,data=bears)
+plot(WEIGHT~LENGTH,data=bears)
+abline(lengthmodel)
+summary.lm(lengthmodel)
+```
+
+Lengthmodel's r-squared is 0.7423.
