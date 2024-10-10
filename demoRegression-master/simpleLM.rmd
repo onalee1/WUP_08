@@ -26,7 +26,7 @@ plot(WEIGHT~NECK,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
-
+R-squared is 0.87.
 
 ## Compare all models that predict WEIGHT other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
