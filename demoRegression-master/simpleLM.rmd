@@ -37,3 +37,12 @@ abline(agemodel)
 summary.lm(agemodel)
 ```
 R-squared of agemodel is 0.5526
+
+```{r}
+headlenmodel <- lm(WEIGHT~HEADLEN,data=bears)
+plot(WEIGHT~HEADLEN,data=bears)
+abline(headlenmodel)
+summary.lm(headlenmodel)
+```
+
+R-squred for headlenmodel is 0.69.
