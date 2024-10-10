@@ -46,3 +46,11 @@ summary.lm(headlenmodel)
 ```
 
 R-squred for headlenmodel is 0.69.
+
+```{r}
+headwthmodel <- lm(WEIGHT~HEADWTH,data=bears)
+plot(WEIGHT~HEADWTH,data=bears)
+abline(headwthmodel)
+summary.lm(headwthmodel)
+```
+Headwth model's r-sqaured is 0.6064.
