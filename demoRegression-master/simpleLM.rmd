@@ -28,15 +28,24 @@ summary.lm(simp)
 ```
 R-squared of simp is 0.87.
 
+Best to Worst:
+1. Neck           ARsqrd: 0.87     RST: 43.91
+
+
 ## Compare all models that predict WEIGHT other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
 ```{r}
-agemodel <- lm(WEIGHT~AGE,data=bears)
+agem <- lm(WEIGHT~AGE,data=bears)
 plot(WEIGHT~AGE,data=bears)
-abline(agemodel)
-summary.lm(agemodel)
+abline(agem)
+summary.lm(agem)
 ```
 R-squared of agemodel is 0.5526
+
+Best to Worst:
+1. Chest          ARsqrd: 0.55     RST: 81.47
+2. Neck           ARsqrd: 0.87     RST: 43.91
+
 
 ```{r}
 headlenmodel <- lm(WEIGHT~HEADLEN,data=bears)
@@ -47,6 +56,11 @@ summary.lm(headlenmodel)
 
 R-squred for headlenmodel is 0.69.
 
+Best to Worst:
+1. Chest          ARsqrd: 0.92     RST: 33.08
+2. Neck           ARsqrd: 0.87     RST: 43.91
+3. Head Length    ARsqrd: 0.69     RST: 67.81
+
 ```{r}
 headwthmodel <- lm(WEIGHT~HEADWTH,data=bears)
 plot(WEIGHT~HEADWTH,data=bears)
@@ -54,6 +68,12 @@ abline(headwthmodel)
 summary.lm(headwthmodel)
 ```
 Headwth model's r-squared is 0.6064.
+
+Best to Worst:
+1. Chest          ARsqrd: 0.92     RST: 33.08
+2. Neck           ARsqrd: 0.87     RST: 43.91
+3. Head Length    ARsqrd: 0.69     RST: 67.81
+4. Head Width     ARsqrd: 0.60     RST: 76.41
 
 ```{r}
 lengthmodel <- lm(WEIGHT~LENGTH,data=bears)
@@ -64,6 +84,13 @@ summary.lm(lengthmodel)
 
 Lengthmodel's r-squared is 0.7423.
 
+Best to Worst:
+1. Chest          ARsqrd: 0.92     RST: 33.08
+2. Neck           ARsqrd: 0.87     RST: 43.91
+3. Length         ARsqrd: 0.74     RST: 61.83
+4. Head Length    ARsqrd: 0.69     RST: 67.81
+5. Head Width     ARsqrd: 0.60     RST: 76.41
+
 ```{r}
 agemodel <- lm(WEIGHT~AGE,data=bears)
 plot(WEIGHT~AGE,data=bears)
@@ -71,3 +98,11 @@ abline(agemodel)
 summary.lm(agemodel)
 ```
 R-squared of agemodel is 0.5526
+
+Best to Worst:
+1. Chest          ARsqrd: 0.92     RST: 33.08
+2. Neck           ARsqrd: 0.87     RST: 43.91
+3. Length         ARsqrd: 0.74     RST: 61.83
+4. Head Length    ARsqrd: 0.69     RST: 67.81
+5. Head Width     ARsqrd: 0.60     RST: 76.41
+6. Age            ARsqrd: 0.55     RST: 81.47
