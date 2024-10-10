@@ -63,3 +63,11 @@ summary.lm(lengthmodel)
 ```
 
 Lengthmodel's r-squared is 0.7423.
+
+```{r}
+agemodel <- lm(WEIGHT~AGE,data=bears)
+plot(WEIGHT~AGE,data=bears)
+abline(agemodel)
+summary.lm(agemodel)
+```
+R-squared of agemodel is 0.5526
